@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            background: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form action="signup.jsp" method="post" onsubmit="return validateForm()">
+        <label for="id">아이디:</label>
+        <input type="text" id="id" name="id_value" placeholder="아이디를 입력하세요" required>
+
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="pw_value" placeholder="비밀번호를 입력하세요" required>
+
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name_value" placeholder="이름을 입력하세요" required>
+
+        <label for="phone_number">전화번호:</label>
+        <input type="tel" id="phone_number" name="phone_number_value" placeholder="전화번호를 입력하세요" required>
+
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email_value" placeholder="이메일을 입력하세요" required>
+
+        <label for="address">주소:</label>
+        <input type="text" id="address" name="address_value" placeholder="주소를 입력하세요" required>
+
+        <button type="submit">회원가입</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var id = document.getElementById('id').value;
+            var password = document.getElementById('password').value;
+            var name = document.getElementById('name').value;
+            var phoneNumber = document.getElementById('phone_number').value;
+            var email = document.getElementById('email').value;
+            var address = document.getElementById('address').value;
+
+            // 간단한 클라이언트 측 검증
+            if (id === '' || password === '' || name === '' || phoneNumber === '' || email === '' || address === '') {
+                alert('빈 칸을 모두 채워주세요.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

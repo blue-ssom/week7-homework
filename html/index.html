@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../css/login.css"/>
+</head>
+<body>
+    <!-- 로그인 버튼을 누르면 signup.html로 이동 -->
+    <form action="../jsp/login.jsp" method="post">
+        <p>아이디</p>
+        <input type="text" name="id_value" placeholder="아이디를 입력하세요" required>
+
+        <p>비밀번호</p>
+        <input type="password" name="pw_value" placeholder="비밀번호를 입력하세요" required>
+
+        <button type="submit">로그인</button>
+        <button type="button" onclick="signUpEvent()">회원가입</button>
+        <button type="button" onclick="searchIdEvent()">아이디 찾기</button>
+        <button type="button" onclick="searchPwEvent()">비밀번호 찾기</button>
+    </form>
+    
+    <!-- 이거 javascript 파일 따로 만들어야겠지..? -->
+    <script>
+        function signUpEvent() {
+            // 회원가입 버튼을 누르면 signup.html로 이동
+            window.location.href = "signup.html";
+        }
+    
+        function searchIdEvent() {
+            // 아이디 찾기 버튼이 눌렸을 때 아이디 찾기 처리
+            window.location.href = "searchId.html";
+        }
+    
+        function searchPwEvent() {
+            // 비밀번호 찾기 버튼이 눌렸을 때 비밀번호 찾기 처리
+            window.location.href = "searchPw.html";
+        }
+    </script>
+</body>
+</html>

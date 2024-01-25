@@ -1,0 +1,42 @@
+/* login.css와 signup.css 내용이 똑같음. 파일 하나 삭제하고 이름 변경하기 */
+body {
+    display: flex;
+    justify-content: center; /* 가로로 배치, 가운데 정렬 */
+    align-items: center; /* 세로로 배치, 가운데 정렬 */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+form {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    /* 내용의 크기에 패딩과 테두리를 포함 */
+    box-sizing: border-box;
+    border: 1px solid #ccccccf1;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}

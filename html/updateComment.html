@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Comment</title>
+    <link rel="stylesheet" href="../css/updateComment.css"> <!-- Add your CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Edit Comment</h1>
+    </header>
+    <div class="container">
+        <!-- Comment update form -->
+        <form action="updateComment.jsp" method="post">
+            <!-- Hidden input field to send commentId to updateComment.jsp -->
+            <input type="hidden" name="commentId" value="<%= request.getParameter("commentId") %>">
+            
+            <!-- Label and Textarea for updated comment content -->
+            <label for="updatedCommentContent">Edit your comment:</label>
+            <textarea id="updatedCommentContent" class="comment-input" name="updatedCommentContent" placeholder="Edit your comment..."></textarea>
+            
+            <!-- Submit button -->
+            <button class="update-button" type="submit">Update Comment</button>
+        </form>
+    </div>
+</body>
+</html>
